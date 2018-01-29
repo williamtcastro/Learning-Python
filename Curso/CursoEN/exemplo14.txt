@@ -1,0 +1,5 @@
+Esse é o meu texto
+Essa é uma nova linha
+Um pouco de informação
+Um pouco de informação (Append)
+Um pouco de informaÃ§Ã£o (Append)
