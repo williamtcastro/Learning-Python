@@ -37,7 +37,7 @@ class Course(models.Model):
     def get_absolute_url(self):
         return ("details", [self.slug])
 
-    #filter the admin section
+    #filter the admin sections
     class Meta:
         verbose_name= 'Curso'
         verbose_name_plural= 'Cursos'

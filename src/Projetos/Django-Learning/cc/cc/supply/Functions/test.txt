@@ -1,0 +1,71 @@
+# # -*- coding: utf-8 -*-
+# import urllib.parse
+# import urllib.request
+# import re
+
+# headers = {}
+# headers['User-Agent'] = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+        
+# def brands(vehicleType): #get the list of the brands available
+#     url = 'https://fipe.parallelum.com.br/api/v1/{}/marcas'.format(vehicleType)
+#     req = urllib.request.Request(url, headers=headers)
+#     response = urllib.request.urlopen(req)
+#     responseData = response.read()
+#     #print(responseData)
+
+#     rawData = re.findall(r'"nome":(.*?)}', str(responseData))
+#     brandCode = re.findall(r'"codigo":([0-9]*)', str(rawData))
+#     brandName = re.findall(r'"(.*?)","codigo":', str(rawData))
+    
+#     # print(rawData)
+#     # print('-'*40)
+#     # print(brandCode)
+#     # print('-'*40)
+#     # print(brandName)
+#     # print('-'*40)
+    
+
+# def modelsSearch(vehicleType, vehicleCode): #get the list of models of a certain brand
+#     url = 'https://fipe.parallelum.com.br/api/v1/{}/marcas/{}/modelos'.format(vehicleType, vehicleCode)
+#     print(url)
+#     req = urllib.request.Request(url, headers=headers)
+#     response = urllib.request.urlopen(req)
+#     responseData = response.read()
+
+#     rawData = re.findall(r'"nome":(.*?)}', str(responseData))
+#     modelCode = re.findall(r'"codigo":([0-9]*)', str(rawData))
+#     modelName = re.findall(r'"(.*?)","codigo":', str(rawData))
+
+#     # print(rawData)
+#     # print('-'*100)
+#     # print(modelCode)
+#     # print('-'*100)
+#     # print(modelName)
+#     # print('-'*100)
+
+    
+# def yearModelsSerach(vehicleType, vehicleCode, vehicleModel): #get the list of the year/gas available on the model of a certain brand
+#     url = 'https://fipe.parallelum.com.br/api/v1/{}/marcas/{}/modelos/{}/anos'.format(vehicleType, vehicleCode, vehicleModel)
+#     print(url)
+#     req = urllib.request.Request(url, headers=headers)
+#     response = urllib.request.urlopen(req)
+#     responseData = response.read()
+
+#     rawData = re.findall(r'"nome":(.*?)}', str(responseData))
+#     gasCode = re.findall(r'"codigo":([0-9][-9*])', str(rawData))
+#     yearModel = re.findall(r'"(.*?)","codigo":', str(rawData))
+
+#     print(rawData)
+#     print('-'*100)
+#     print(gasCode)
+#     print('-'*100)
+#     print(yearModel)
+#     print('-'*100)
+
+# # brands('carros')
+# # modelsSearch('carros','59')
+# yearModelsSerach('carros', '59', '5940')
+
+
+# #--------FUCKING CRAP CODE I HAVE WRITTEN HERE BECAUSE I DON´T KNOW HOW TO USE APIS DAMN
+# #----------https://deividfortuna.github.io/fipe/----------
