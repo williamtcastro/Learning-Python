@@ -7,6 +7,8 @@ class Supply(models.Model):
 
     vehicleType = models.CharField(choices=vehicleTypes, default='carro')
 
+    # vehicleModel =
+
     brand = models.CharField('Marca', blank=False)
 
 

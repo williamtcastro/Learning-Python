@@ -3,15 +3,33 @@ import requests
 
 main_api = 'https://fipe.parallelum.com.br/api/v1/'
 
+#-----LISTS-----------------
+
+brands = []
+names = []
+codes = []
+
+#----
+
+models = []
+modelsCode = []
+models_codes = []
+
+#----
+
+vehicleYearGas = []
+
+#-----------------------------
+
 def brandList(vehicleType):
 
     url = main_api + vehicleType + '/marcas'
 
     json_data = requests.get(url).json()
 
-    brands = []
-    names = []
-    codes = []
+    # brands = []
+    # names = []
+    # codes = []
 
     for brand_code in json_data:
         name = brand_code['nome']
@@ -22,6 +40,8 @@ def brandList(vehicleType):
 
     brands = dict(zip(names, codes))
 
+    return names , brands
+
 #--------------------------------------------------------------------------------
 
 def vehicleModel(vehicleType, brandCode):
@@ -31,9 +51,9 @@ def vehicleModel(vehicleType, brandCode):
     json_data = requests.get(url).json()
     formated_data = json_data['modelos'][0:]
 
-    models = []
-    modelsCode = []
-    models_codes = []
+    # models = []
+    # modelsCode = []
+    # models_codes = []
 
     for model_code in formated_data:
         model = model_code['nome']
@@ -53,7 +73,7 @@ def vehicleVersion(vehicleType, brandCode, vehicleVersionCode):
 
     # vehicles_codes = []
     # vehicleCodes = []
-    vehicleYearGas = []
+    # vehicleYearGas = []
 
     for vehicle_code in json_data:
         vehicleYear = vehicle_code['nome']
