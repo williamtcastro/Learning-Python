@@ -3,13 +3,13 @@ from django.db import models
 # Create your models here.
 class Supply(models.Model):
 
-    vehicleTypes = (('carro', 'CARRO'),('moto', 'MOTO'),('caminhao', 'CAMINHAO'))
+    vehicle_types = (('carro', 'CARRO'),('moto', 'MOTO'),('caminhao', 'CAMINHAO'))
 
-    vehicleType = models.CharField(choices=vehicleTypes, default='carro')
+    vehicle_type = models.CharField(choices=vehicle_types, default='carro', max_length=100)
 
     # vehicleModel =
 
-    brand = models.CharField('Marca', blank=False)
+    brand = models.CharField('Marca', blank=False, max_length=100)
 
 
 #---------- BRAND LIST -------------------------------
