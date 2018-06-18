@@ -23,10 +23,7 @@ def index(query):
             dataIn.append(data)
             numeroIn.append(numero)
             tempoIn.append(int(tempo))
-
-    if query in nomeIn:
-        for i in nomeIn[query]:
-            print(i)
+        
 
 
     # CRIAR LISTA SEQUENCIAL DE DADOS
