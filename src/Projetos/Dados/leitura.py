@@ -1,7 +1,10 @@
 import csv
 
-
 def procura():
+    query = input("Digite o nome para receber a lista das ultimas ligações.\n >>> ")
+    index(query)
+
+def index(query):
     with open('Phonelog.csv') as chamadaLog:
         phoneLog = csv.reader(chamadaLog, delimiter=',')
 
@@ -21,10 +24,9 @@ def procura():
             numeroIn.append(numero)
             tempoIn.append(int(tempo))
 
-        qualNome = input('Digite o nome = ')
-        inNome = nomeIn.index(qualNome.lower())
-        oNum = numeroIn[inNome]
-        print (oNum)
+    if query in nomeIn:
+        for i in nomeIn[query]:
+            print(i)
 
 
     # CRIAR LISTA SEQUENCIAL DE DADOS
@@ -32,6 +34,5 @@ def procura():
     # for i in range(len(tempoIn)):
     #	tempo1= tempoIn[i]
     #	print(tempo1)
-
 
 procura()
